@@ -1,9 +1,20 @@
 body {
   font-size: 20px;
+  background: rgb(149, 194, 215);
 }
 
 a[href="#"] {
   text-decoration: none;
+}
+
+.thumbnail-item {
+  display: block;
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.5);
+}
+
+.thumbnail-list {
+  list-style: none;
 }
 
 .thumbnail-image {
