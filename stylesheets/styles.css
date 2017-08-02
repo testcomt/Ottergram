@@ -2,6 +2,15 @@ body {
   font-size: 20px;
 }
 
+a[href="#"] {
+  text-decoration: none;
+}
+
+.thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
 .thumbnail-title {
   display: block;
   margin: 0;
@@ -11,9 +20,4 @@ body {
   color: rgb(200, 0, 0);
 
   font-size: 18px
-}
-
-
-a[href="#"] {
-  text-decoration: none;
 }
