@@ -64,3 +64,8 @@ a[href="#"] {
 
   font-size: 18px
 }
+
+.detail-image {
+  display: block;
+  width: 90%;
+}
