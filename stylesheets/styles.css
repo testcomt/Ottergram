@@ -23,7 +23,8 @@
 }
 
 
-html, body {
+html,body {
+  /*fill the full screen for diff devices or browsers*/
   height:100%;
 }
 
@@ -36,11 +37,14 @@ body {
   background: rgb(149, 194, 215);
 }
 
+/*define a style with element+attribute+value */
 a[href="#"] {
+  /*delete underlines of titles*/
   text-decoration: none;
 }
 
 .main-header {
+  /*I do not want to grow, I can shrink as needed, please calculate my size for me*/
   flex: 0 1 auto;
 }
 
@@ -63,6 +67,7 @@ a[href="#"] {
 }
 
 .thumbnail-item {
+  /*inline-blocck means blocks without line breaks*/
   display: inline-block;
   min-width: 120px;
   max-width: 120px;
@@ -80,8 +85,10 @@ a[href="#"] {
 
 .thumbnail-list {
   flex: 0 1 auto;
+  /*2 tells the browser to draw it after any of its siblings that has a lower order value; and the default order value is 0 */
   order: 2;
   display: flex;
+  /*justify-content attribute can make sure even amount of spacing between flex items*/
   justify-content: space-between;
   list-style: none;
   padding: 10px;
@@ -126,7 +133,7 @@ a[href="#"] {
 
 .detail-image-title {
   position: absolute;
-  bottom: -16px;
+  bottom: 160px;
   left: 4px;
 
   font-family: airstreamregular;
