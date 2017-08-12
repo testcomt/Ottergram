@@ -26,3 +26,27 @@ function setDetailsFromThumb(thumbnail){
   'use strict';
   return setDetails(imageFromThumb(thumbnail),titleFromThumb(thumbnail));
 }
+
+function addThumbClickHandler(thumb){
+  'use strict';
+  thumb.addEventListener('click',function(event){
+    event.preventDefault();
+    setDetailsFromThumb(thumb);
+  })
+}
+
+function getThumbnailsArray(){
+  'use strict';
+  var thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+  //convert NOdelist to Array so that using methods of Array
+  var thumbnailArray = [].slice.call(thumbnails);
+  return thumbnailArray;
+}
+
+function initailizeEvents(){
+  'use strict';
+  var thumbnails = getThumbnailsArray();
+  thumbnails.forEach(addThumbClickHandler);
+}
+
+initailizeEvents();
