@@ -73,8 +73,17 @@ a[href="#"] {
   max-width: 120px;
   border: 1px solid rgb(100%, 100%, 100%);
   border: 1px solid rgba(100%, 100%, 100%, 0.5);
+ /*flat out effect: specify the property of transform and how long the animation will take */
+  transition: transform 233ms ease-in-out;
 }
 
+/*hover  is a pseudo class*/
+.thumbnail-item:hover{
+  /*scale(2.2) means draw it 220% */
+  transform: scale(1.2);
+  /*demo: slow at beginning state of the transition*/
+  /*transition: transform 1000ms ease-in;*/
+}
 /*#barry-otter {
   background: green;
 }*/
@@ -91,7 +100,7 @@ a[href="#"] {
   /*justify-content attribute can make sure even amount of spacing between flex items*/
   justify-content: space-between;
   list-style: none;
-  padding: 10px;
+  padding: 20px 0;
 
   white-space: nowrap;
   overflow: auto;
@@ -126,6 +135,13 @@ a[href="#"] {
 .detail-image-frame {
   position: relative;
   text-align: center;
+
+  transition: transform 333ms cubic-bezier(1,.06,.28,1);
+}
+
+.is-tiny {
+  transform: scale(0.001);
+  transition: transform 0ms;
 }
 
 .detail-image {
@@ -168,6 +184,8 @@ a[href="#"] {
     flex-direction: column;
     order: 0;
     margin-left: 20px;
+
+    padding: 0 35px;
   }
 
   .thumbnail-item {
